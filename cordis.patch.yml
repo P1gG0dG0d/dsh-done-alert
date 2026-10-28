@@ -1,0 +1,6 @@
+# dsh-done-alert bundle patch: inserts the host row into the profile roster.
+# Forked from dthcle/dsh-badge-notify (MIT): same host/client split, plus a
+# completion/attention chime and a green/orange state-colored counter badge.
+- insert:
+    - id: done-alert
+      name: 'dsh-done-alert'

@@ -1,0 +1,56 @@
+{
+  "name": "dsh-done-alert",
+  "version": "1.2.1",
+  "description": "任务完成提醒（基于 dsh-badge-notify 二次开发）：会话完成时播放微信式提示音，并在 Windows 任务栏 DSH 图标上叠画带数字的角标——绿=有未读的已完成会话，橙=有提问待回答/权限待批准（橙优先），未读语义与 DSH 侧边栏小圆点一致。Done-alert for DeepSeek Harness: WeChat-style chime + colored counter badge (green=unread completions, orange=pending question/approval) on the taskbar icon. Fork of dsh-badge-notify by dthcle (MIT).",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cordis-plugin",
+    "taskbar",
+    "badge",
+    "notification",
+    "sound",
+    "chime",
+    "windows"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "node test/child-session.test.mjs",
+    "gen:wavs": "node scripts/gen-wavs.mjs"
+  },
+  "os": [
+    "win32"
+  ],
+  "files": [
+    "lib/**/*.js",
+    "assets",
+    "locale/*.json",
+    "icon.svg",
+    "scripts/*.mjs",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "lead (fork), dthcle (upstream dsh-badge-notify)"
+}
