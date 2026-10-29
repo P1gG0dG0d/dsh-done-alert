@@ -34,6 +34,18 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/P1gG0dG0d/dsh-done-alert.git"
+  },
+  "homepage": "https://github.com/P1gG0dG0d/dsh-done-alert#readme",
+  "bugs": {
+    "url": "https://github.com/P1gG0dG0d/dsh-done-alert/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "test": "node test/child-session.test.mjs",
     "gen:wavs": "node scripts/gen-wavs.mjs"
